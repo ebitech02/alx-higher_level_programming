@@ -5,8 +5,8 @@
 
 const argsNo = process.argv;
 
-if (argsNo[2] !== undefined) {
-  console.log(argsNo[2]);
-} else {
+if (!argsNo[2]) {
   console.log('No argument');
+} else {
+  console.log(argsNo[2]);
 }
