@@ -8,6 +8,7 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
+    """connects to the database"""
     db = MySQLdb.connnect(
             host="localhost",
             port=3306,
