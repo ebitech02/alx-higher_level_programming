@@ -1,4 +1,4 @@
 #!/bin/bash
 # outputs the byte count
 
-curl -s -w "%{size_download}\n" -o /dev/null "$1"
+curl -s "$1" | wc -c
