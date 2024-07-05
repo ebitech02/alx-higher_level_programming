@@ -1,4 +1,4 @@
 #!/bin/bash
-# takes in a URL, sends a post request to that URL and displays response
+# sends a get request to the url and diplays the response
 
-curl -s -X POST -d "test@gmail.com" -d "I will always be here for PLD" "$1"
+curl -s -H "X-School-User-Id: 98" "$1"
