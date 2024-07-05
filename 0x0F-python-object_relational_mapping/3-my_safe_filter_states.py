@@ -16,11 +16,9 @@ if __name__ == "__main__":
             db=argv[3])
 
     cursor = db.cursor()
-    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC",(argv[4],))
+    cursor.execute("SELECT * FROM states WHERE name LIKE %s ORDER BY id ASC", (argv[4],))
     rows = cursor.fetchall()
-
     for row in rows:
         print(row)
-
     cursor.close()
     db.close()

@@ -8,7 +8,8 @@ import MySQLdb
 from sys import argv
 
 if __name__ == "__main__":
-    db = MySQLdb.connnect(
+    """connects to the database"""
+    db = MySQLdb.connect(
             host="localhost",
             port=3306,
             user=argv[1],
@@ -18,7 +19,6 @@ if __name__ == "__main__":
      cursor = db.cursor()
 
      query = "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(argv[4])
-
      cursor.execute(query)
      
      rows = cursor.fetchall()
